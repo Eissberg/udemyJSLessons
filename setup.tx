@@ -1,0 +1,36 @@
+1. Установить программы: VScode, node, git, gitKraken
+2. VScode: установить плагины:
+	All Autocomplete
+	Auto Close Tag
+	Auto Complete Tag
+	Auto Rename Tag
+	Beautify
+	Code Runner
+	GitLens — Git supercharged
+	Import Cost
+	JavaScript (ES6) code snippets
+	jshint
+	Live Server
+	Multiple clipboards for VSCode
+	Reactjs code snippets
+	Sass
+	Theme - Oceanic Next
+	vscode-icons
+	ESLint
+3. Для jshint пройти установку:
+	npm install -g jshint
+3. В выбраной папке пройти инициализацию:
+	git init
+	git config --global user.name "EiSSberG"
+	git config --global user.email jeka.chk@gmail.com
+4. Подключиться к GitHub
+	git remote add shared https://github.com/Eissberg/homeWork.git
+	git branch --track shared homeWork
+	git pull shared master
+	
+//	git push shared master
+
+//	git add .
+//	git commit -m "08122019"
+
+	
