@@ -46,3 +46,41 @@ let twelwe = "12.2px";
 //console.log(Math.round(twelwe));
 console.log(parseInt(twelwe));      //методы
 console.log(parseFloat(twelwe));    //методы
+
+//  CallBack функции ***************************************
+
+function first() {
+    //Что-то делаем
+    setTimeout( function(){
+        console.log(1);
+    }, 500); //ЗАДЕРЖКА В ПОЛ СЕКУНДЫ
+}
+
+function second(){
+    console.log(2);
+}
+
+first();
+second();
+
+// Вызов callBack внутри функции
+function learnJS(lang, callback){
+    console.log("Я учу "+lang);
+    callback();
+}
+
+learnJS("JavaScript", function() {
+    console.log("Я прошел 3-й урок!");
+})
+
+//Вызов callBack функции вне функции
+function learnJS(lang, callback){
+    console.log("Я учу "+lang);
+    callback();
+}
+
+function done(){
+    console.log("Я прошел 3-й урок!");
+}
+
+learnJS("JavaScript", done);
