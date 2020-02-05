@@ -1,44 +1,47 @@
 // let arr = ["first", 2, 3, "four", 5];
-// //arr[99] = 99;
+// //arr[99] = 99;                              // не правильно
 
-// // arr.pop();
-// // arr.push("5");
+// //редактирование массива с конца
+// // arr.pop();                                //удаление с конца 
+// // arr.push("5");                            //добавление в конец    
 
-// // arr.shift();
-// // arr.unshift("1");
-// //console.log(arr.length);
+// //редактирование массивива сначала
+// // arr.shift();                              //удаление с начала
+// // arr.unshift("1");                         //добавление в начало
 
-// arr.forEach(function(item, i, mass) {
+// //console.log(arr.length);                   //возвращает последний индекс +1
+
+// arr.forEach(function(item, i, mass) {        //перебор элементов массива методом ForEach
 //     console.log(i + ': ' + item + ' (massive: ' + mass + ')');
 // });
 
 // console.log(arr);
 
-// // for (let i = 0; i <= arr.length; i++){
+// // for (let i = 0; i <= arr.length; i++){    //перебор элементов массива циклом
 // //     console.log(arr[i]);
 // // }
 
 // let mass = [1, 3, 4, 6, 7];
 
-// for (let key of mass){
+// for (let key of mass){                       //перебор элементов массива циклом For Of - не работает с обьектами       For in - ключи      For of - значения
 //     console.log(key);
 // }
 
-// let ans = prompt("", ""),
+// let ans = prompt("", ""),                    //метод Split
 //     arr = [];
 
 // arr = ans.split(',');
 // console.log(arr);
 
-// let arr = ["aawe", 'zzz', 'pp', 'req'];
+// let arr = ["aawe", 'zzz', 'pp', 'req'],      //метод Join
 //     i = arr.join(', ');
 
 // console.log(i);
 
-let arr = [1, 15, 4],
+let arr = [1, 15, 4],                           //метод Sort 
 i = arr.sort(compareNum);
 
-function compareNum(a,b){
+function compareNum(a,b){                       //сортировка для циферных массивов
 return a-b;
 }
 
