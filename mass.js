@@ -27,14 +27,14 @@
 //     console.log(key);
 // }
 
-// let ans = prompt("", ""),                    //метод Split
-//     arr = [];
+//  let ans = prompt("", ""),                    //метод Split
+//      arr = [];
 
-// arr = ans.split(',');
-// console.log(arr);
+//  arr = ans.split(',');
+//  console.log(arr);
 
 // let arr = ["aawe", 'zzz', 'pp', 'req'],      //метод Join
-//     i = arr.join(', ');
+//     i = arr.join(', ');ё
 
 // console.log(i);
 
@@ -45,4 +45,18 @@ function compareNum(a,b){                       //сортировка для ц
 return a-b;
 }
 
-console.log(arr);
+console.log(arr);                               //псевдомассивы не имеют своих методов
+
+let soldier = {
+    health: 400,
+    armor: 100
+};
+
+let John = {
+    health: 100
+};
+
+John.__proto__ = soldier;
+
+console.log(John);
+console.log(John.armor);
