@@ -80,32 +80,22 @@ let appData = {
     },
     chooseIncome: function(){
         let items = prompt("Что принесет дополнительный доход? (Перечислите через запятую!)", "");
-            while (items == "" || items == null){
-            alert("Будьте внимательны и вводите корректные данные!"); 
-            items = prompt("Что принесет дополнительный доход? (Перечислите через запятую!)", "");
-        }   
+            while (items == "" || items == null || !isNaN(items)){
+                alert("Будьте внимательны и вводите корректные данные!"); 
+                items = prompt("Что принесет дополнительный доход? (Перечислите через запятую!2)", "");
+            }
+            appData.income = items.split(", ");
+            appData.income.push(prompt("Может что-то еще?"));
+            appData.income.sort()
             
-        //     let items = prompt("Что принесет дополнительный доход? (Перечислите через запятую!)", "");
-        //     if ( (typeof(items)) !== 'string' || items == "" ) {
-        //         alert("Будьте внимательны и вводите корректные данные!");                 
-        //     } else {
-        //         appData.income = items.split(", ");
-        //         appData.income.push(prompt("Может что-то еще?"));
-        //         appData.income.sort();
-        //         break;
-        //     }
-
-
-        // for (let key of items) {
-        //     if (isNaN(items) || items == "" || items == null){
-        //         alert("Будьте внимательны и вводите корректные данные!"); 
-        //     } else {
-        //         appData.income = items.split(", ");
-        //         appData.income.push(prompt("Может что-то еще?"));
-        //         appData.income.sort();   
-        //     }
-        // }
-        
-        
+            appData.income.forEach(function(item, inn, mass) {
+                 if (inn != 0) {
+                    console.log("Способы доп. зароботка: " + item + " " + inn);
+                }
+            });
     }
-};
+}
+
+ for (let key in appData) {    // работа со свойствами обьекта
+     console.log("Наша программа включает в себя данные: "+ key + " имеет значение " + appData[key]);
+ }
