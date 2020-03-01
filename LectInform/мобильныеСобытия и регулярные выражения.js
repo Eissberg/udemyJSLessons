@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     box.addEventListener('touchmove', function(e){
         e.preventDefault();
-        console.log("Red box: "+ e.touches[0].pageX);
+        console.log("Red box: "+ e.touches[0].pageX );
     });
 
     // box.addEventListener('touchend', function(e){
